@@ -1,7 +1,0 @@
-
-1)Version control systems are a category of software tools that help a software team manage changes to source code over time. Version control software keeps track of every modification to the code in a special kind of database. 
-
-2)If a mistake is made programmers can go back and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.
-it actually tracks the history of changes that we made in our repo and if any programmer want to go back he can.
-
-
