@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function imp() {
+            var form = new FormData(document.getElementById("form"));
+            var inputvalue = form.get("input_type_name");
+            document.write("Name ::",inputvalue);
+            document.write("<br>");
+
+            var phone = form.get("input_type_phone_no");
+            document.write("Contact Number ::",phone, "<br>");
+            var degree = form.get("input_type_Bachelor");
+            document.write("Interest ::");
+            if (degree == "on")
+                document.write("Bachelor<br>");
+            else if(form.get("input_type_Masters") != "on")
+                document.write("No Degree Prefrences <br>");
+            else
+                document.write("Masters<br>");
+            
+            var text = form.get("input_type_Mytext");
+            document.write("About :: ",text, "<br>");
+            
+            document.write("Subject ::")
+            var Subject = form.get("Subject1");
+            if(Subject != null)
+            document.write("DSA <br>");
+            var Subject = form.get("Subject2");
+            if(Subject != null)
+            document.write("Operating System <br>");
+            
+            var Subject = form.get("Subject3");
+            if(Subject != null)
+            document.write("Computer Graphics <br>");
+            
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="form">
+        <div>
+            Name:<input type="text" name="input_type_name" id="name">
+        </div>
+        <div>
+            Phone No.:<input type="number" name="input_type_phone_no">
+        </div>
+        <div>
+            Interest:Bachelor<input type="radio" name="input_type_Bachelor">Masters<input type="radio"
+                name="input_type_Masters">
+        </div>
+        <div>
+            Write About Yourself: <textarea name="input_type_Mytext" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <p>Subjects</p>
+            <input type="checkbox" id="Subject1" name="Subject1" value="DSA">
+            <label for="Subject1">DSA</label><br>
+            <input type="checkbox" id="Subject2" name="Subject2" value="OS">
+            <label for="Subject2">Operating System</label><br>
+            <input type="checkbox" id="Subject3" name="Subject3" value="CG">
+            <label for="Subject3">Computer Graphics</label><br>
+        </div>
+        <div>
+
+            <input type="button" value="Submit" onClick="imp()">
+        </div>
+    </form>
+</body>
+
+</html>
